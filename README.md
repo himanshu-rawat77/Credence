@@ -1,4 +1,4 @@
-# Credence - Decentralized Invoice Financing on Solana
+# Credence - DeFi Invoice Financing on Solana
 
 [![Demo Video](https://img.shields.io/badge/Demo-Watch%20Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/TlZeikojPnw)
 [![Solana](https://img.shields.io/badge/Solana-Blockchain-purple?style=for-the-badge&logo=solana)](https://solana.com/)
@@ -6,26 +6,18 @@
 [![Finternet](https://img.shields.io/badge/Finternet-Protocol-orange?style=for-the-badge)](https://finternet.org/)
 
 
-**Credence** is a revolutionary decentralized marketplace for invoice financing that transforms traditional receivables into programmable financial assets on Solana. Built on the Finternet protocol, Credence bridges real-world trade with on-chain liquidity, enabling businesses to unlock immediate working capital while providing financiers with transparent, trustless investment opportunities backed by real-world receivables.
+**Credence** is a decentralized invoice financing marketplace built on **Solana** and powered by the **Finternet protocol**, transforming real-world receivables into programmable financial assets and bridging trade finance with on-chain liquidity.
 
-## 🎯 The Problem We Solve
 
-### For Businesses (SMEs)
-- **Cash Flow Bottlenecks**: 30-120 day payment cycles create liquidity constraints
-- **Limited Access**: Traditional banks offer slow, bureaucratic financing solutions
-- **Opaque Pricing**: Hidden fees and unclear risk assessments
-- **Credit Barriers**: Smaller businesses struggle with limited credit history
+##  The Problem We Solve
 
-### For Financiers
-- **Limited Asset Classes**: Few transparent ways to access receivables as investments
-- **Lack of Liquidity**: Trillions in trade receivables remain locked and unproductive
-- **Centralized Systems**: Traditional financing lacks transparency and efficiency
+Global trade finance is broken. Businesses wait 30–120 days to unlock cash tied up in receivables, while banks offer slow, opaque, and exclusionary financing. At the same time, trillions in invoices sit idle—illiquid, unproductive, and locked inside centralized systems—leaving financiers with limited, inefficient ways to deploy capital. What’s missing is an interoperable financial base layer that can turn receivables into programmable assets, deliver instant liquidity, and ensure transparency at scale. This is where **Solana’s high-performance rails** and the **Finternet protocol’s open architecture** come together to transform trade finance into a borderless, on-chain marketplace.
 
-## 💡 Our Solution
+##  Our Solution
 
 Credence introduces a **Solana-native model** for invoice financing that combines trustless infrastructure with real-world trade:
 
-### 🔗 Core Features
+###  Core Features
 
 #### 1. **Invoice Tokenization on Solana**
 - **NFT Route**: Each invoice as a unique NFT with embedded metadata on Solana
@@ -81,52 +73,51 @@ Credence introduces a **Solana-native model** for invoice financing that combine
 - **Transaction Signing**: Secure transaction handling
 - **On-Chain Storage**: Metadata and invoice data on Solana
 
-## 🎭 User Roles & Workflows
+##  User Roles & Workflows
 
-### 🏢 Organizations (Sellers)
+###  Organizations (Sellers)
 1. **Create Invoices**: Generate professional invoices with line items
 2. **List on Marketplace**: Submit invoices for financing
 3. **Accept Bids**: Choose the best financing offer
 4. **Receive Funds**: Get 80-90% upfront liquidity
 5. **Track Status**: Monitor invoice lifecycle and payments
 
-### 💰 Financiers (Investors)
+###  Financiers (Investors)
 1. **Browse Marketplace**: View available invoice listings
 2. **Place Bids**: Competitive bidding on preferred invoices
 3. **Manage Portfolio**: Track investments and returns
 4. **Receive Payments**: Automated payouts when customers pay
 5. **Risk Assessment**: Access customer credit information
 
-### 👥 Customers (Buyers)
+###  Customers (Buyers)
 1. **View Invoices**: Access detailed invoice information
 2. **Make Payments**: Secure payment processing
 3. **Track History**: Complete payment and invoice history
 4. **Notifications**: Real-time updates on invoice status
 
-## 🚀 Key Features
+## Key Features  
 
-### For Organizations
-- ✅ **Professional Invoice Creation** with customizable templates
-- ✅ **Automated Calculations** for taxes, discounts, and totals
-- ✅ **Marketplace Integration** for instant liquidity
-- ✅ **Real-time Analytics** and reporting
-- ✅ **Customer Management** with payment tracking
-- ✅ **Notification System** for payment reminders
+### For Organizations  
+1. Tokenize invoices on Solana, converting receivables into digital assets.  
+2. Unlock instant liquidity through Finternet-enabled capital markets.  
+3. Access real-time, on-chain analytics for cash flow and credit monitoring.  
+4. Build trust via decentralized identity and reputation mechanisms.  
+5. Automate settlement reminders and payment updates.  
 
-### For Financiers
-- ✅ **Investment Dashboard** with portfolio overview
-- ✅ **Competitive Bidding** system
-- ✅ **Risk Assessment Tools** with customer data
-- ✅ **Automated Returns** when invoices are paid
-- ✅ **Balance Management** with locked/unlocked funds
-- ✅ **Market Analytics** for informed decisions
+### For Financiers  
+1. Manage investments through a DeFi-inspired dashboard built for Solana.  
+2. Participate in open bidding pools to finance invoices permissionlessly.  
+3. Evaluate transparent risk models powered by both on-chain and off-chain data.  
+4. Receive automated yield distributions as invoices are paid.  
+5. Manage locked and unlocked liquidity programmatically with Rust-based smart contracts.  
+6. Gain Finternet-driven insights into global trade finance opportunities.  
 
-### For Customers
-- ✅ **Invoice Portal** with detailed breakdowns
-- ✅ **Secure Payment Processing** with multiple options
-- ✅ **Payment History** and receipts
-- ✅ **Real-time Notifications** for due dates
-- ✅ **Mobile-responsive** interface
+### For Customers  
+1. Access an on-chain invoice portal with verifiable, tamper-proof records.  
+2. Settle payments in stablecoins or Solana-native tokens.  
+3. Maintain an immutable, on-chain history of all payments.  
+4. Receive real-time notifications for due dates and completed settlements.  
+5. Experience a wallet-first interface integrated with Solana wallets.  
 
 ## 🛠️ Installation & Setup
 
