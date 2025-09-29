@@ -1,13 +1,12 @@
-# Credence - Decentralized Invoice Financing Platform
+# Credence - Decentralized Invoice Financing on Solana
 
 [![Demo Video](https://img.shields.io/badge/Demo-Watch%20Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/TlZeikojPnw)
-[![Next.js](https://img.shields.io/badge/Next.js-15.5.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-Express-green?style=for-the-badge&logo=node.js)](https://nodejs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge&logo=mongodb)](https://mongodb.com/)
+[![Solana](https://img.shields.io/badge/Solana-Blockchain-purple?style=for-the-badge&logo=solana)](https://solana.com/)
+[![Token-2022](https://img.shields.io/badge/Token--2022-Program-blue?style=for-the-badge)](https://spl.solana.com/token-2022)
+[![Finternet](https://img.shields.io/badge/Finternet-Protocol-orange?style=for-the-badge)](https://finternet.org/)
 
-## 🚀 Executive Summary
 
-**Credence** is a revolutionary decentralized marketplace for invoice financing that transforms traditional receivables into programmable financial assets. Built on modern web technologies, Credence bridges the gap between real-world trade and digital liquidity, enabling businesses to unlock immediate working capital while providing financiers with transparent, secure investment opportunities.
+**Credence** is a revolutionary decentralized marketplace for invoice financing that transforms traditional receivables into programmable financial assets on Solana. Built on the Finternet protocol, Credence bridges real-world trade with on-chain liquidity, enabling businesses to unlock immediate working capital while providing financiers with transparent, trustless investment opportunities backed by real-world receivables.
 
 ## 🎯 The Problem We Solve
 
@@ -24,49 +23,63 @@
 
 ## 💡 Our Solution
 
-Credence introduces a **Web3-native model** for invoice financing that combines trustless infrastructure with real-world trade:
+Credence introduces a **Solana-native model** for invoice financing that combines trustless infrastructure with real-world trade:
 
 ### 🔗 Core Features
 
-#### 1. **Invoice Tokenization**
-- **NFT Route**: Each invoice as a unique NFT with embedded metadata
-- **Token-2022 Route**: Fungible tokens supporting partial payments and programmable transfers
-- **Decentralized Storage**: Secure invoice data on Arweave/IPFS
+#### 1. **Invoice Tokenization on Solana**
+- **NFT Route**: Each invoice as a unique NFT with embedded metadata on Solana
+- **Token-2022 Program**: Advanced fungible tokens with programmable transfer hooks and partial payments
+- **Decentralized Storage**: Secure invoice data on Arweave/IPFS with Solana metadata
 
-#### 2. **Decentralized Bidding Marketplace**
+### 📊 Invoice NFT Lifecycle Demonstration
+
+![Invoice NFT Lifecycle](docs/images/invoice-nft-lifecycle.png)
+
+*Figure 1: Complete lifecycle of an invoice NFT on Solana blockchain, showing creation, partial payments, full settlement, and automatic burning.*
+
+### 🔧 Console Log Demonstration
+
+![Console Log Output](docs/images/console-log-demo.png)
+
+*Figure 2: Real-time console output showing invoice NFT operations on Solana, including transaction timing and state changes.*
+
+#### 2. **Decentralized Bidding on Solana**
 - **Competitive Pricing**: Banks and investors compete for financing opportunities
-- **Transparent Process**: All bids and transactions recorded on-chain
+- **On-Chain Transparency**: All bids and transactions recorded on Solana blockchain
 - **Fair Access**: Open marketplace ensures equal opportunities
 
-#### 3. **Smart Escrow Contracts**
+#### 3. **Smart Escrow Contracts (Solana Programs)**
 - **Automated Payments**: Programmable escrow accounts handle repayments
 - **Secure Distribution**: Guaranteed financier payouts before invoice settlement
 - **Trustless Operations**: No intermediaries required
 
 #### 4. **Transparent Lifecycle Management**
-- **On-Chain Records**: Every step from issuance to repayment tracked
+- **On-Chain Records**: Every step from issuance to repayment tracked on Solana
 - **Real-time Updates**: Live status updates for all stakeholders
 - **Audit Trail**: Complete transaction history for compliance
 
+
+
 ## 🏗️ Technical Architecture
 
-### Frontend (Next.js 15.5.3)
-- **Modern React**: Built with React 19.1.0 and TypeScript
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Real-time Updates**: Live marketplace and bidding interface
-- **Role-based Access**: Separate interfaces for Organizations, Financiers, and Customers
+### Solana Blockchain Layer
+- **Solana Programs**: Smart contracts for invoice tokenization and escrow
+- **Token-2022 Program**: Advanced token standards with programmable features
+- **SPL Tokens**: Standard token operations for invoice representation
+- **Metaplex**: NFT metadata standards for invoice data
 
-### Backend (Node.js + Express)
-- **RESTful API**: Comprehensive API with proper error handling
-- **Authentication**: JWT-based security with role-based access control
-- **Rate Limiting**: Protection against abuse and spam
-- **Logging**: Comprehensive logging with Winston
-- **Security**: Helmet, CORS, and input sanitization
+### Finternet Protocol Integration
+- **Real-World Assets (RWA)**: Invoice tokenization as RWAs
+- **Cross-Chain Compatibility**: Bridge to other Finternet protocols
+- **DeFi Integration**: Composable with existing DeFi protocols
+- **Liquidity Pools**: Automated market making for invoice financing
 
-### Database (MongoDB)
-- **Scalable Schema**: Optimized for invoice and user management
-- **Indexing**: Performance-optimized queries
-- **Relationships**: Proper data modeling for complex relationships
+### Web3 Infrastructure
+- **Wallet Integration**: Phantom, Solflare, and other Solana wallets
+- **RPC Endpoints**: High-performance Solana RPC connections
+- **Transaction Signing**: Secure transaction handling
+- **On-Chain Storage**: Metadata and invoice data on Solana
 
 ## 🎭 User Roles & Workflows
 
@@ -118,97 +131,89 @@ Credence introduces a **Web3-native model** for invoice financing that combines 
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
-- Node.js 18+ 
-- MongoDB 6+
-- npm or yarn
+- Solana CLI 1.18+
+- Anchor Framework 0.30+
+- Node.js 18+
+- Rust 1.70+
 
-### Backend Setup
+### Solana Program Setup
 ```bash
-cd backend
-npm install
-cp config.env.example config.env
-# Configure your environment variables
-npm run dev
-```
+# Install Solana CLI
+sh -c "$(curl -sSfL https://release.solana.com/v1.18.0/install)"
 
-### Frontend Setup
-```bash
-npm install
-npm run dev
+# Install Anchor
+cargo install --git https://github.com/coral-xyz/anchor avm --locked --force
+
+# Clone and build
+git clone https://github.com/your-org/credence
+cd credence/programs/credence
+anchor build
 ```
 
 ### Environment Variables
-Create a `backend/config.env` file with:
+Create a `.env` file with:
 ```env
-NODE_ENV=development
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/credence
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRES_IN=90d
-EMAIL_USERNAME=your_email
-EMAIL_PASSWORD=your_password
+SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
+SOLANA_KEYPAIR_PATH=~/.config/solana/id.json
+ANCHOR_WALLET=~/.config/solana/id.json
 ```
 
-## 📊 API Endpoints
+## 📊 Solana Program Instructions
 
-### Authentication
-- `POST /api/v1/auth/register` - User registration
-- `POST /api/v1/auth/login` - User login
-- `POST /api/v1/auth/logout` - User logout
+### Invoice Management
+- `create_invoice` - Tokenize invoice as NFT or Token-2022
+- `update_invoice` - Modify invoice metadata
+- `transfer_invoice` - Transfer invoice ownership
+- `burn_invoice` - Burn invoice token on payment
 
-### Organizations
-- `GET /api/v1/organizations` - Get organization profile
-- `POST /api/v1/organizations` - Create organization
-- `PUT /api/v1/organizations` - Update organization
+### Marketplace Operations
+- `list_invoice` - List invoice for financing
+- `place_bid` - Place competitive bid
+- `accept_bid` - Accept winning bid
+- `cancel_bid` - Cancel existing bid
 
-### Invoices
-- `GET /api/v1/invoices` - List invoices
-- `POST /api/v1/invoices` - Create invoice
-- `GET /api/v1/invoices/:id` - Get invoice details
-- `PUT /api/v1/invoices/:id` - Update invoice
+### Escrow Management
+- `create_escrow` - Initialize escrow account
+- `deposit_funds` - Lock financier funds
+- `release_funds` - Release funds to organization
+- `refund_funds` - Return funds to financier
 
-### Marketplace
-- `GET /api/v1/marketplace` - List marketplace items
-- `POST /api/v1/marketplace` - Create listing
-- `POST /api/v1/marketplace/:id/bid` - Place bid
-- `DELETE /api/v1/marketplace/:id/bid/:bidId` - Cancel bid
-
-### Financiers
-- `GET /api/v1/financiers` - Get financier profile
-- `POST /api/v1/financiers` - Create financier
-- `POST /api/v1/financiers/balance` - Add balance
+### Token-2022 Features
+- `partial_payment` - Process partial invoice payments
+- `transfer_hook` - Programmable transfer logic
+- `metadata_update` - Update invoice metadata
 
 ## 🔒 Security Features
 
-- **JWT Authentication** with role-based access control
-- **Rate Limiting** to prevent abuse
-- **Input Validation** and sanitization
-- **CORS Protection** for cross-origin requests
-- **Helmet Security** headers
-- **XSS Protection** with input cleaning
-- **MongoDB Injection** prevention
+- **Solana Program Security** with Anchor framework validation
+- **Wallet Authentication** via Solana wallet signatures
+- **On-Chain Validation** of all transactions
+- **Escrow Security** with time-locked releases
+- **Token-2022 Security** with programmable transfer hooks
+- **RPC Protection** against spam and abuse
+- **Smart Contract Audits** for critical operations
 
 ## 📈 Competitive Advantages
 
 ### 🎯 **Decentralized & Transparent**
 - No intermediaries or hidden fees
-- All transactions recorded on-chain
-- Open-source and auditable
+- All transactions recorded on Solana blockchain
+- Open-source and auditable smart contracts
 
 ### 💧 **Liquidity Unlocking**
 - SMEs get immediate cash flow (80-90% upfront)
 - No more waiting 30-120 days for payments
-- Flexible financing terms
+- Flexible financing terms via Token-2022
 
 ### 🏦 **New Asset Class**
-- Trade receivables become investable
-- Liquid and transferable assets
+- Trade receivables become investable RWAs
+- Liquid and transferable on Solana
 - Composable with DeFi protocols
 
 ### ⚡ **Low-Cost & Scalable**
-- Efficient transaction processing
+- Solana's high throughput (65,000 TPS)
 - Minimal fees compared to traditional banking
-- Global accessibility
+- Global accessibility via Finternet protocol
 
 ## 🌍 Use Cases
 
@@ -216,6 +221,9 @@ EMAIL_PASSWORD=your_password
 ### **Banks** diversifying into receivable-backed lending
 ### **DeFi Investors** seeking safe, real-world yield opportunities
 ### **Cross-border Trade** financing in underserved regions
+
+
+
 
 ## 🎥 Demo & Documentation
 
@@ -225,12 +233,12 @@ EMAIL_PASSWORD=your_password
 
 ## 🚀 Getting Started
 
-1. **Clone the repository**
-2. **Set up your environment** (MongoDB, Node.js)
-3. **Install dependencies** (`npm install`)
-4. **Configure environment variables**
-5. **Run the application** (`npm run dev`)
-6. **Access the platform** at `http://localhost:3000`
+1. **Install Solana CLI** and Anchor framework
+2. **Set up Solana wallet** (Phantom, Solflare, etc.)
+3. **Deploy smart contracts** to Solana devnet
+4. **Configure RPC endpoints** for your environment
+5. **Connect wallet** to the platform
+6. **Start tokenizing invoices** and participating in the marketplace
 
 ## 🤝 Contributing
 
